@@ -12,8 +12,6 @@ Seu objetivo é fornecer uma API RESTful estável e segura para o gerenciamento 
 - MySQL
 - Spring Data JPA
 - Spring Web
-- (Opcional) Spring Security
-
 ---
 
 ## Funcionalidades principais
