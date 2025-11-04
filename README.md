@@ -61,4 +61,4 @@ Este projeto é de uso interno e educativo.
 Distribuição ou reprodução não autorizada sem o devido crédito é proibida.
 | Status do Projeto | Licença |
 | :--- | :--- |
-| [![Status](https://img.shields.io/badge/Status-Ativo-brightgreen)](https://github.com/lucas-andre-dev/imperium-backend) | [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) |
+| [![Status](https://img.shields.io/badge/Status-Ativo-brightgreen)](https://github.com/lucas-andre-dev/imperium-backend) | [![License]([https://img.shields.io/badge/License-MIT-blue.svg](https://github.com/lucas-andre-dev/imperium_front_end/blob/main/img/Imperium.png))](LICENSE) |
