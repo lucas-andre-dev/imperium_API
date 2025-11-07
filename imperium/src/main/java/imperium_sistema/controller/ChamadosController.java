@@ -48,4 +48,10 @@ public class ChamadosController {
     public void deletar(@PathVariable Long id){
          chamadosService.deletar(id);
     }
+
+    // ALTERAR
+    @PutMapping("resolvido/{id}")
+    public ChamadoEntity alterar(@PathVariable Long id){
+        return chamadosService.alterarStatus(id) ;
+    }
 }
