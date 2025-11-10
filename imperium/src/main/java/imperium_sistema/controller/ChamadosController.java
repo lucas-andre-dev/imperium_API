@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/chamados")
 public class ChamadosController {
+
     // INJEÇÃO DE DEPENDENCIA VIA CONTRUTOR
     private ChamadosService chamadosService ;
 
@@ -26,6 +27,20 @@ public class ChamadosController {
         return chamadosService.listarPorIdUser(id) ;
     }
 
+    // LISTAR TODOS CHAMADOS POR ID
+    @GetMapping("/listar/{id}")
+    public ChamadoEntity listarChamado(@PathVariable Long id){
+
+        return chamadosService.listarPorId(id) ;
+    }
+
+    //LISTAR TODOS OS CHAMADOS POR STATUS
+    // PENDENTE // RESOLVIDO
+    @GetMapping("status/{status}")
+    public List<ChamadoEntity> listarPendente(@PathVariable String status){
+        return chamadosService.listarPorStatus(status);
+    }
+
     //  LISTAR TUDO SEM MIMI, QUEREMOS TUDO!!
     @GetMapping
     public List<ChamadoEntity>listarTudo(){
@@ -38,11 +53,13 @@ public class ChamadosController {
         chamado.setData(LocalDateTime.now());
         chamadosService.criar(chamado) ;
     }
+
     // ALTERAR
     @PutMapping("/{id}")
     public void alterar(@PathVariable Long id,@RequestBody ChamadoEntity chamadoEntity){
         chamadosService.alterarPorId(id,chamadoEntity) ;
     }
+
     // DELETAR
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id){

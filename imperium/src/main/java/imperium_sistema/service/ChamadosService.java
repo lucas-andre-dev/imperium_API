@@ -54,6 +54,9 @@ public class ChamadosService {
         chamados.setDescricao(descricao);
         return chamadosRepository.save(chamados) ;
     }
+    public ChamadoEntity listarPorId(Long id){
+        return chamadosRepository.findById(id).get() ;
+    }
     public List<ChamadoEntity>listarPorIdUser(Long id){
         return chamadosRepository.findAllByUserEntityId(id) ;
     }
@@ -63,5 +66,9 @@ public class ChamadosService {
         chamado.setStatus("resolvido");
         return chamadosRepository.save(chamado) ;
 
+    }
+
+    public List<ChamadoEntity>listarPorStatus(String status){
+        return chamadosRepository.findAllByStatus(status) ;
     }
 }

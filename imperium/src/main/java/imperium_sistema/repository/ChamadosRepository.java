@@ -12,4 +12,5 @@ import java.util.Optional;
 @Repository
 public interface ChamadosRepository extends JpaRepository<ChamadoEntity,Long> {
     List<ChamadoEntity> findAllByUserEntityId(Long userId);
+    List<ChamadoEntity> findAllByStatus(String status) ;
 }
