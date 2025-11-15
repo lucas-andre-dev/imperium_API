@@ -1,11 +1,11 @@
 # Etapa 1: build
-FROM maven:3.8.4-17 AS build
+FROM maven:3.9.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
 # Copia somente o pom.xml primeiro
 COPY imperium/pom.xml .
 
-# Baixa dependências (melhora cache)
+# Baixa dependências
 RUN mvn dependency:go-offline
 
 # Copia o restante do código
